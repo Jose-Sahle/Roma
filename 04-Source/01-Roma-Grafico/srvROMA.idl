@@ -1,0 +1,20 @@
+// srvROMA.idl : IDL source for srvROMA.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (srvROMA.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(6055D5B6-5F4C-4697-9A21-66A8CDECA220),
+	version(1.0),
+	helpstring("srvROMA 1.0 Type Library")
+]
+library SRVROMALib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+};

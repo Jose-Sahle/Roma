@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{9049DC8A-D32B-426F-B4D1-A152DED669A4} = s 'srvROMA'
+		'srvROMA.EXE'
+		{
+			val AppID = s {9049DC8A-D32B-426F-B4D1-A152DED669A4}
+		}
+	}
+}

@@ -1,0 +1,299 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""srvROMA.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,0,0
+ PRODUCTVERSION 2,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "ROMA Module\0"
+            VALUE "FileVersion", "2, 0, 0, 0\0"
+            VALUE "InternalName", "ROMA\0"
+            VALUE "LegalCopyright", "Copyright 2001\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OLESelfRegister", "\0"
+            VALUE "OriginalFilename", "ROMA.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "ROMA Module\0"
+            VALUE "ProductVersion", "2, 0, 0, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_SrvROMA             REGISTRY MOVEABLE PURE  "srvROMA.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_SERVER_CONFIG DIALOG DISCARDABLE  0, 0, 417, 306
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ROMA - Configurações "
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Registrar",IDC_BUTTON_REGISTRAR,66,16,79,14
+    PUSHBUTTON      "Desregistrar",IDC_BUTTON_DESREGISTRAR,277,16,79,14
+    CONTROL         "Iniciar serviço remoto",IDC_CHECK_INICIAR_SERVICO,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,120,41,82,10
+    EDITTEXT        IDC_EDIT_SOCKET_TIMEOUT,119,52,25,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_EDIT_SOCKET_PORT,119,67,25,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_EDIT_SOCKET_MAX_CONNECTIONS,119,84,25,14,
+                    ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT_SOCKET_DOMINIOS,48,114,153,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Adicionar Usuários...",IDC_BUTTON_BUSCAR_USUARIOS,116,
+                    131,84,14
+    CONTROL         "List1",IDC_LIST_USUARIOS,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,11,148,192,113
+    PUSHBUTTON      "Remover",IDC_BUTTON_USUARIO_REMOVER,147,266,53,12
+    EDITTEXT        IDC_EDIT_MSMQ_TIMEOUT,318,95,34,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    PUSHBUTTON      "Adicionar...",IDC_BUTTON_FILA_ADICIONAR,239,132,70,13
+    PUSHBUTTON      "Criar...",IDC_BUTTON_FILA_CRIAR,321,132,70,13
+    PUSHBUTTON      "Remover",IDC_BUTTON_FILA_REMOVER,219,266,53,12
+    PUSHBUTTON      "Remover e excluir do MSMQ",IDC_BUTTON_FILA_EXCLUIR_MSMQ,
+                    296,266,103,12
+    DEFPUSHBUTTON   "&Salvar",IDOK,308,287,50,14
+    PUSHBUTTON      "&Cancelar",IDCANCEL,360,287,50,14
+    LTEXT           "Tempo máximo sem resposta:",IDC_STATIC,13,55,94,8
+    LTEXT           "milesegundos",IDC_STATIC,151,54,44,8
+    LTEXT           "Porta de Comunicação:",IDC_STATIC,13,70,75,8
+    LTEXT           "( de 1 à 65535 )",IDC_STATIC,149,71,51,8
+    LTEXT           "Conexões Máximas Simultâneas:",IDC_STATIC,13,85,104,8
+    LTEXT           "( máximo 1000 )",IDC_STATIC,150,86,50,8
+    GROUPBOX        "Conexão Remota",IDC_STATIC,7,35,199,66
+    GROUPBOX        "Serviço",IDC_STATIC,210,35,199,47
+    LTEXT           "Tempo máximo sem resposta:",IDC_STATIC,219,98,93,8
+    LTEXT           "milesegundos",IDC_STATIC,357,98,44,8
+    GROUPBOX        "Usuários Remotos",IDC_STATIC,7,103,200,179
+    GROUPBOX        "MSMQ",IDC_STATIC,210,85,200,197
+    GROUPBOX        "Serviço",IDC_STATIC,7,7,403,28
+    LTEXT           "Domínos",IDC_STATIC,12,116,29,9
+    CONTROL         "List1",IDC_LIST_FILAS,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,214,149,192,113
+    EDITTEXT        IDC_EDIT_MSMQ_ERROR,263,112,124,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Fila de Erro:",IDC_STATIC,219,115,38,8
+    PUSHBUTTON      "...",IDC_BUTTON_BUSCA_FILA_ERRO,390,112,18,14
+    EDITTEXT        IDC_EDIT_SVR_TIMEOUT,319,61,34,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Tempo máximo sem resposta\nde espera para finalizar o serviço",
+                    IDC_STATIC,221,44,93,27
+    LTEXT           "segundos",IDC_STATIC,358,64,32,8
+END
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Roma"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Roma Versão 2.0.0",IDC_STATIC,40,11,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2003",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_DIALOG_USUARIOS DIALOG DISCARDABLE  0, 0, 434, 254
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Usuários"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List1",IDC_LIST_LISTA_USUARIOS,"SysListView32",
+                    LVS_REPORT | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | 
+                    LVS_AUTOARRANGE | WS_BORDER | WS_TABSTOP,3,18,422,94
+    PUSHBUTTON      "Selecionar",ID_BUTTON_SELECIONAR,366,114,50,14
+    LISTBOX         IDC_LIST_USUARIOS_SELECIONADOS,6,133,422,80,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Remover",ID_BUTTON_REMOVER,366,216,50,14
+    DEFPUSHBUTTON   "Ok",IDOK,329,237,50,14
+    PUSHBUTTON      "Cancela",IDCANCEL,382,237,50,14
+    GROUPBOX        "Lista",IDC_STATIC,0,6,434,228
+END
+
+IDD_DIALOGBAR_MENSAGEM DIALOGEX 0, 0, 330, 27
+STYLE DS_MODALFRAME | DS_CENTER | WS_CHILD
+EXSTYLE WS_EX_TRANSPARENT
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CTEXT           "TODO: layout dialog bar",IDC_STATIC_MENSAGEM,12,9,305,8
+END
+
+IDD_DIALOG_CRIAR_FILA DIALOG DISCARDABLE  0, 0, 186, 90
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Criar fila"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT_FILA,56,26,123,15,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Fechar",IDOK,126,69,50,14
+    LTEXT           "Nome da Fila:",IDC_STATIC,9,29,44,10
+    LTEXT           "Static",IDC_STATIC_FILA,57,11,122,11
+    PUSHBUTTON      "Criar",IDC_BUTTON_CRIAR,106,43,58,13
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DIALOG_SERVER_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 410
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 301
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_DIALOG_USUARIOS, DIALOG
+    BEGIN
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 253
+    END
+
+    IDD_DIALOGBAR_MENSAGEM, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 328
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 25
+    END
+
+    IDD_DIALOG_CRIAR_FILA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Roma.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SERVICENAME         "ROMA"
+    IDS_SERVICEDESC         "Rotiador de Mensagens Assíncronas"
+    IDS_ABOUTBOX            "&Sobre Roma..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "srvROMA.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

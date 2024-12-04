@@ -1,0 +1,209 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""srvROMA.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,1,0
+ PRODUCTVERSION 1,0,1,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "srvROMA Module\0"
+            VALUE "FileVersion", "1, 0, 1, 0\0"
+            VALUE "InternalName", "srvROMA\0"
+            VALUE "LegalCopyright", "Copyright 2001\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OLESelfRegister", "\0"
+            VALUE "OriginalFilename", "srvROMA.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "srvROMA Module\0"
+            VALUE "ProductVersion", "1, 0, 1, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_SrvROMA             REGISTRY MOVEABLE PURE  "srvROMA.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_ROMA DIALOG DISCARDABLE  0, 0, 391, 210
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ROtiador de Mensagens Assíncronas (ROMA)"
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_DIALOG_SERVER_CONFIG DIALOG DISCARDABLE  0, 0, 417, 269
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Configurações"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT_SOCKET_TIMEOUT,120,16,25,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_EDIT_SOCKET_PORT,120,33,25,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_EDIT_SOCKET_MAX_CONNECTIONS,120,49,25,14,
+                    ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT_SOCKET_USUARIO,47,83,129,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_BUSCAR_USUARIOS,177,83,25,14
+    PUSHBUTTON      "Adicionar",IDC_BUTTON_USUARIO_ADICIONAR,147,99,53,12
+    CONTROL         "List1",IDC_LIST_USUARIOS,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,11,114,192,118
+    PUSHBUTTON      "Remover",IDC_BUTTON_USUARIO_REMOVER,147,233,53,12
+    EDITTEXT        IDC_EDIT_MSMQ_TIMEOUT,325,16,25,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_EDIT_MSQM_MAX_FILA,325,34,25,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    PUSHBUTTON      "Adicionar",IDC_BUTTON_FILA_ADICIONAR,235,85,70,13
+    PUSHBUTTON      "Criar",IDC_BUTTON_FILA_CRIAR,317,85,70,13,NOT 
+                    WS_VISIBLE
+    LISTBOX         IDC_LIST_FILAS,218,107,182,125,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Remover",IDC_BUTTON_FILA_REMOVER,219,233,53,12
+    PUSHBUTTON      "Remover e excluir do MSMQ",IDC_BUTTON_FILA_EXCLUIR_MSMQ,
+                    296,233,103,12
+    DEFPUSHBUTTON   "&Salvar",IDOK,308,252,50,14
+    PUSHBUTTON      "&Cancelar",IDCANCEL,360,252,50,14
+    LTEXT           "Tempo máximo sem resposta:",IDC_STATIC,13,19,94,8
+    LTEXT           "milesegundos",IDC_STATIC,150,19,44,8
+    LTEXT           "Porta de Comunicação:",IDC_STATIC,13,35,75,8
+    LTEXT           "( de 1 à 65535 )",IDC_STATIC,149,36,51,8
+    LTEXT           "Conexões Máximas Simultâneas:",IDC_STATIC,13,52,104,8
+    LTEXT           "( máximo 1000 )",IDC_STATIC,150,52,50,8
+    GROUPBOX        "Conexão Remota",IDC_STATIC,7,7,199,61
+    GROUPBOX        "MSMQ",IDC_STATIC,210,7,199,61
+    LTEXT           "Tempo máximo sem resposta:",IDC_STATIC,219,19,94,8
+    LTEXT           "milesegundos",IDC_STATIC,355,19,44,8
+    LTEXT           "Quantidade máxima de filas:",IDC_STATIC,219,37,89,8
+    LTEXT           "(de 1 à 100)",IDC_STATIC,355,37,39,8
+    GROUPBOX        "Usuários Remotos",IDC_STATIC,7,68,200,179
+    LTEXT           "Usuários",IDC_STATIC,12,85,29,9
+    GROUPBOX        "Filas",IDC_STATIC,210,68,200,179
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DIALOG_SERVER_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 410
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 266
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SERVICENAME         "srvROMA"
+    IDS_SERVICEDESC         "Route Objects from Messaging Assyncronous"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "srvROMA.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
